@@ -1,13 +1,13 @@
 module.exports = ({ env }) => ({
   connection: {
-    client: "mysql", // we are using MySQL
+    client: "mysql",
     connection: {
-      host: env("DATABASE_HOST", "sql206.infinityfree.com"),
+      host: env("DATABASE_HOST"),
       port: env.int("DATABASE_PORT", 3306),
-      database: env("DATABASE_NAME", "if0_40482815_Ai_Resume_Builder"),
-      user: env("DATABASE_USERNAME", "if0_40482815"),
-      password: env("DATABASE_PASSWORD", "gM3E5p2hEXxmz"),
-      ssl: env.bool("DATABASE_SSL", false), // InfinityFree does not support SSL
+      database: env("DATABASE_NAME"),
+      user: env("DATABASE_USERNAME"),
+      password: env("DATABASE_PASSWORD"),
+      ssl: env.bool("DATABASE_SSL", false),
     },
     pool: {
       min: env.int("DATABASE_POOL_MIN", 2),
