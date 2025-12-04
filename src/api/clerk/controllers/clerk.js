@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  async syncClerkUser(ctx) {
+  async sync(ctx) {
     const { email, username, clerkId } = ctx.request.body;
 
     if (!email || !clerkId) {
@@ -24,7 +24,7 @@ module.exports = {
         data: {
           email,
           username: username || email,
-          provider: "local",
+          provider: "clerk",
           confirmed: true,
           role: 1,
         },

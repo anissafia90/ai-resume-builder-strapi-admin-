@@ -3,8 +3,10 @@ module.exports = {
     {
       method: "POST",
       path: "/clerk-sync",
-      handler: "auth.syncClerkUser",
-      config: { auth: false },
+      handler: "clerk.sync",
+      config: {
+        auth: false,
+      },
     },
   ],
 };
